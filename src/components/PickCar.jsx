@@ -4,7 +4,8 @@ import { CAR_DATA } from "./CarData";
 
 function PickCar() {
   const [active, setActive] = useState("SecondCar");
-  const [colorBtn, setColorBtn] = useState("btn1");
+  const [colorBtn, setColorBtn] = useState(CAR_DATA[0]["id"]);
+  const [selectedCar, setSelectedCar] = useState(CAR_DATA[0]);
 
   const btnID = (id) => {
     setColorBtn(colorBtn === id ? "" : id);
@@ -30,7 +31,19 @@ function PickCar() {
             <div className="pick-container__car-content">
               {/* pick car */}
               <div className="pick-box">
-                <button
+                {CAR_DATA.map((vehicle) => (
+                   <button
+                   className={`${coloringButton(vehicle["id"])}`}
+                   onClick={() => {
+                    // setActive("SecondCar");
+                    setSelectedCar(vehicle);
+                     btnID("btn1");
+                   }}
+                 >
+                   {vehicle["name"]}
+                 </button>
+                ))}
+                {/* <button
                   className={`${coloringButton("btn1")}`}
                   onClick={() => {
                     setActive("SecondCar");
@@ -88,15 +101,15 @@ function PickCar() {
                   }}
                 >
                   VW Passat CC
-                </button>
+                </button> */}
               </div>
 
-              {active === "FirstCar" && <CarBox data={CAR_DATA} carID={0} />}
-              {active === "SecondCar" && <CarBox data={CAR_DATA} carID={1} />}
-              {active === "ThirdCar" && <CarBox data={CAR_DATA} carID={2} />}
-              {active === "FourthCar" && <CarBox data={CAR_DATA} carID={3} />}
-              {active === "FifthCar" && <CarBox data={CAR_DATA} carID={4} />}
-              {active === "SixthCar" && <CarBox data={CAR_DATA} carID={5} />}
+              {<CarBox data={selectedCar}  />}
+              {/* {active === "SecondCar" && <CarBox data={CAR_DATA[1]}  />}
+              {active === "ThirdCar" && <CarBox data={CAR_DATA[2]}  />}
+              {active === "FourthCar" && <CarBox data={CAR_DATA[3]}  />}
+              {active === "FifthCar" && <CarBox data={CAR_DATA[4]}  />}
+              {active === "SixthCar" && <CarBox data={CAR_DATA[5]}  />} */}
             </div>
           </div>
         </div>

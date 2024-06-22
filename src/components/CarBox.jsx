@@ -1,17 +1,17 @@
 import { useState } from "react";
 
-function CarBox({ data, carID }) {
+function CarBox({ data }) {
   const [carLoad, setCarLoad] = useState(true);
   return (
     <>
-      {data[carID].map((car, id) => (
-        <div key={id} className="box-cars">
+      {/* {data.map((car, id) => ( */}
+        <div key={"id"} className="box-cars">
           {/* car */}
           <div className="pick-car">
             {carLoad && <span className="loader"></span>}
             <img
               style={{ display: carLoad ? "none" : "block" }}
-              src={car.img}
+              src={data.img}
               alt="car_img"
               onLoad={() => setCarLoad(false)}
             />
@@ -19,42 +19,42 @@ function CarBox({ data, carID }) {
           {/* description */}
           <div className="pick-description">
             <div className="pick-description__price">
-              <span>${car.price}</span>/ rent per day
+              <span>${data.price}</span>/ rent per day
             </div>
             <div className="pick-description__table">
               <div className="pick-description__table__col">
                 <span>Model</span>
-                <span>{car.model}</span>
+                <span>{data.model}</span>
               </div>
 
               <div className="pick-description__table__col">
                 <span>Mark</span>
-                <span>{car.mark}</span>
+                <span>{data.mark}</span>
               </div>
 
               <div className="pick-description__table__col">
                 <span>Year</span>
-                <span>{car.year}</span>
+                <span>{data.year}</span>
               </div>
 
               <div className="pick-description__table__col">
                 <span>Doors</span>
-                <span>{car.doors}</span>
+                <span>{data.doors}</span>
               </div>
 
               <div className="pick-description__table__col">
                 <span>AC</span>
-                <span>{car.air}</span>
+                <span>{data.air}</span>
               </div>
 
               <div className="pick-description__table__col">
                 <span>Transmission</span>
-                <span>{car.transmission}</span>
+                <span>{data.transmission}</span>
               </div>
 
               <div className="pick-description__table__col">
                 <span>Fuel</span>
-                <span>{car.fuel}</span>
+                <span>{data.fuel}</span>
               </div>
             </div>
             {/* btn cta */}
@@ -63,7 +63,7 @@ function CarBox({ data, carID }) {
             </a>
           </div>
         </div>
-      ))}
+     // ))}
     </>
   );
 }

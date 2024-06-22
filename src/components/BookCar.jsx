@@ -5,12 +5,14 @@ import CarToyota from "../images/cars-big/toyotacamry.jpg";
 import CarBmw from "../images/cars-big/bmw320.jpg";
 import CarMercedes from "../images/cars-big/benz.jpg";
 import CarPassat from "../images/cars-big/passatcc.jpg";
+import { CAR_DATA } from "./CarData";
 
 function BookCar() {
   const [modal, setModal] = useState(false); //  class - active-modal
 
   // booking car
   const [carType, setCarType] = useState("");
+  const [car, setCar] = useState(null);
   const [pickUp, setPickUp] = useState("");
   const [dropOff, setDropOff] = useState("");
   const [pickTime, setPickTime] = useState("");
@@ -99,8 +101,12 @@ function BookCar() {
 
   // taking value of booking inputs
   const handleCar = (e) => {
+    console.log(e.target.value);
+   var veh = CAR_DATA.find((vehicle) => (vehicle["id"] === e.target.value));
+   console.log(veh);
+   setCar(veh);
     setCarType(e.target.value);
-    setCarImg(e.target.value);
+    setCarImg(veh.img);
   };
 
   const handlePick = (e) => {
@@ -121,28 +127,28 @@ function BookCar() {
 
   // based on value name show car img
   let imgUrl;
-  switch (carImg) {
-    case "Audi A1 S-Line":
-      imgUrl = CarAudi;
-      break;
-    case "VW Golf 6":
-      imgUrl = CarGolf;
-      break;
-    case "Toyota Camry":
-      imgUrl = CarToyota;
-      break;
-    case "BMW 320 ModernLine":
-      imgUrl = CarBmw;
-      break;
-    case "Mercedes-Benz GLK":
-      imgUrl = CarMercedes;
-      break;
-    case "VW Passat CC":
-      imgUrl = CarPassat;
-      break;
-    default:
-      imgUrl = "";
-  }
+  // switch (carType) {
+  //   case "Audi A1 S-Line":
+  //     imgUrl = CarAudi;
+  //     break;
+  //   case "VW Golf 6":
+  //     imgUrl = CarGolf;
+  //     break;
+  //   case "Toyota Camry":
+  //     imgUrl = CarToyota;
+  //     break;
+  //   case "BMW 320 ModernLine":
+  //     imgUrl = CarBmw;
+  //     break;
+  //   case "Mercedes-Benz GLK":
+  //     imgUrl = CarMercedes;
+  //     break;
+  //   case "VW Passat CC":
+  //     imgUrl = CarPassat;
+  //     break;
+  //   default:
+  //     imgUrl = "";
+  // }
 
   // hide message
   const hideMessage = () => {
@@ -180,7 +186,13 @@ function BookCar() {
                     Type <b>*</b>
                   </label>
                   <select value={carType} onChange={handleCar}>
-                    <option>Select your car type</option>
+                  <option>Select your car</option>
+                    {
+                      CAR_DATA.map((vehicle) => (
+                        <option value={vehicle["id"]}>{vehicle["name"]}</option>
+                      ))
+                    }
+                    {/* <option>Select your car type</option>
                     <option value="Audi A1 S-Line">Audi A1 S-Line</option>
                     <option value="VW Golf 6">VW Golf 6</option>
                     <option value="Toyota Camry">Toyota Camry</option>
@@ -188,7 +200,7 @@ function BookCar() {
                       BMW 320 ModernLine
                     </option>
                     <option value="Mercedes-Benz GLK">Mercedes-Benz GLK</option>
-                    <option value="VW Passat CC">VW Passat CC</option>
+                    <option value="VW Passat CC">VW Passat CC</option> */}
                   </select>
                 </div>
 
@@ -259,7 +271,7 @@ function BookCar() {
 
       {/* modal ------------------------------------ */}
 
-      <div className={`booking-modal ${modal ? "active-modal" : ""}`}>
+    {car &&  <div className={`booking-modal ${modal ? "active-modal" : ""}`}>
         {/* title */}
         <div className="booking-modal__title">
           <h2>Complete Reservation</h2>
@@ -328,9 +340,9 @@ function BookCar() {
           </div>
           <div className="booking-modal__car-info__model">
             <h5>
-              <span>Car -</span> {carType}
+              <span>Car -</span> {car["name"]}
             </h5>
-            {imgUrl && <img src={imgUrl} alt="car_img" />}
+            { <img src={car["img"]} alt="car_img" />}
           </div>
         </div>
         {/* personal info */}
@@ -457,7 +469,7 @@ function BookCar() {
             </div>
           </form>
         </div>
-      </div>
+      </div>}
     </>
   );
 }
