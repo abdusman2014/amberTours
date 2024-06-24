@@ -7,10 +7,17 @@ import Models from "./Pages/Models";
 import TestimonialsPage from "./Pages/TestimonialsPage";
 import Team from "./Pages/Team";
 import Contact from "./Pages/Contact";
+import useFetchData from './repository/UseFetchData';
 
 function App() {
+  const [data, isLoading] = useFetchData(
+    'vehicles'
+  );
   return (
     <>
+  {isLoading ? (
+    <p>Loading...</p>
+  ) : ( <>
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
@@ -20,6 +27,7 @@ function App() {
         <Route path="team" element={<Team />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
+    </>)}
     </>
   );
 }

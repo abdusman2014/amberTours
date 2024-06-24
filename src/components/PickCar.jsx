@@ -37,7 +37,7 @@ function PickCar() {
                    onClick={() => {
                     // setActive("SecondCar");
                     setSelectedCar(vehicle);
-                     btnID("btn1");
+                     btnID(vehicle["id"]);
                    }}
                  >
                    {vehicle["name"]}
