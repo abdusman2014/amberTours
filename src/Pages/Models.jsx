@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import { useEffect, useState, useRef } from "react";
 import HeroPages from "../components/HeroPages";
 import CarImg1 from "../images/cars-big/audi-box.png";
 import CarImg2 from "../images/cars-big/golf6-box.png";
@@ -8,8 +9,23 @@ import CarImg5 from "../images/cars-big/benz-box.png";
 import CarImg6 from "../images/cars-big/passat-box.png";
 import { Link } from "react-router-dom";
 import { CAR_DATA } from "../components/CarData";
+import useVehicleStore from "../data/app_data";
+import useFetchData from '../repository/UseFetchData';
 
 function Models() {
+  const {vehicles} = useVehicleStore();
+  
+ // const isLoading = useVehicleStore( (state) => state.isLoading);
+  // const [data, isLoading,fetchData] = useFetchData(
+  //   'vehicles'
+  // );
+
+  // useEffect(()=>{
+  //   fetchData();
+  // },[]);
+  useEffect(()=>{
+    console.log("model veh: ",vehicles, "load: ", );
+  },[vehicles])
   return (
     <>
       <section className="models-section">
@@ -18,7 +34,7 @@ function Models() {
           <div className="models-div">
             <>
             {
-              CAR_DATA.map((vehicle) =>{
+              vehicles?.map((vehicle) =>{
                
               return  <div className="models-div__box">
               <div className="models-div__box__img">
@@ -55,9 +71,17 @@ function Models() {
                     </span>
                   </div>
                   <div className="models-div__box__descr__name-price__btn">
-                    <Link onClick={() => window.scrollTo(0, 0)} to="/">
+                    <div onClick={() =>{
+                      let url = `https://web.whatsapp.com/send?phone=+923177936365}`;
+let message = "Hey, I want to Book " + vehicle["name"] + ", Please Provide me more information on this";
+                      // Appending the message to the URL by encoding it
+                        url += `&text=${encodeURI(message)}&app_absent=0`;
+                  
+                      // Open our newly created URL in a new tab to send the message
+                        window.open(url);
+                    }}>
                       Book Ride
-                    </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -75,7 +99,7 @@ function Models() {
               <h2>Book a car by getting in touch with us</h2>
               <span>
                 <i className="fa-solid fa-phone"></i>
-                <h3>(123) 456-7869</h3>
+                <h3>051 2203088</h3>
               </span>
             </div>
           </div>

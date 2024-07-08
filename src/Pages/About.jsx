@@ -36,7 +36,7 @@ function About() {
                     <p>Car Types</p>
                   </span>
                 </div>
-                <div className="about-main__text__icons__box">
+                {/* <div className="about-main__text__icons__box">
                   <img src={Box2} alt="car-icon" />
                   <span>
                     <h4>85</h4>
@@ -49,7 +49,7 @@ function About() {
                     <h4>75</h4>
                     <p>Repair Shop</p>
                   </span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ function About() {
             <h2>Book a car by getting in touch with us</h2>
             <span>
               <i className="fa-solid fa-phone"></i>
-              <h3>(123) 456-7869</h3>
+              <h3>051 2203088</h3>
             </span>
           </div>
         </div>

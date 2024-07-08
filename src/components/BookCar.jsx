@@ -6,9 +6,15 @@ import CarBmw from "../images/cars-big/bmw320.jpg";
 import CarMercedes from "../images/cars-big/benz.jpg";
 import CarPassat from "../images/cars-big/passatcc.jpg";
 import { CAR_DATA } from "./CarData";
+import useVehicleStore from "../data/app_data";
 
 function BookCar() {
   const [modal, setModal] = useState(false); //  class - active-modal
+  const {vehicles} = useVehicleStore();
+
+  useEffect(()=>{
+    console.log("book veh: ",vehicles);
+  },[vehicles])
 
   // booking car
   const [carType, setCarType] = useState("");
@@ -93,6 +99,14 @@ function BookCar() {
 
   // confirm modal booking
   const confirmBooking = (e) => {
+    let url = `https://web.whatsapp.com/send?phone=+923177936365}`;
+    let message = "Hey, I want to Book " + car["name"] + "\n Name: " + name + " " + lastName + "\n Pickup location: " + pickUp + "\n Dropoff location: " + dropOff + "\n Pickup date: " + pickTime + "\n Dropoff date: "+ dropTime;
+                          // Appending the message to the URL by encoding it
+                          console.log(message);
+                          //   url += `&text=${encodeURI(message)}&app_absent=0`;
+                      
+                          // // Open our newly created URL in a new tab to send the message
+                          //   window.open(url);
     e.preventDefault();
     setModal(!modal);
     const doneMsg = document.querySelector(".booking-done");
@@ -101,12 +115,14 @@ function BookCar() {
 
   // taking value of booking inputs
   const handleCar = (e) => {
-    console.log(e.target.value);
-   var veh = CAR_DATA.find((vehicle) => (vehicle["id"] === e.target.value));
+    console.log(e.target.value,"v: ",vehicles);
+   var veh = vehicles.find((vehicle) =>{ 
+    console.log(vehicle["id"])
+    return (vehicle["id"] === Number(e.target.value))});
    console.log(veh);
    setCar(veh);
     setCarType(e.target.value);
-    setCarImg(veh.img);
+    setCarImg(veh["img"]);
   };
 
   const handlePick = (e) => {
@@ -175,7 +191,7 @@ function BookCar() {
               </p>
 
               <p className="booking-done">
-                Check your email to confirm an order.{" "}
+                Check your Whatsapp to confirm an order.{" "}
                 <i onClick={hideMessage} className="fa-solid fa-xmark"></i>
               </p>
 
@@ -188,7 +204,7 @@ function BookCar() {
                   <select value={carType} onChange={handleCar}>
                   <option>Select your car</option>
                     {
-                      CAR_DATA.map((vehicle) => (
+                      vehicles?.map((vehicle) => (
                         <option value={vehicle["id"]}>{vehicle["name"]}</option>
                       ))
                     }
@@ -211,11 +227,10 @@ function BookCar() {
                   </label>
                   <select value={pickUp} onChange={handlePick}>
                     <option>Select pick up location</option>
-                    <option>Delhi</option>
-                    <option>Kolkata</option>
-                    <option>Bengaluru</option>
-                    <option>Mumbai</option>
-                    <option>Goa</option>
+                    <option>Lahore</option>
+                    <option>Islamabad</option>
+                    <option>Multan</option>
+                    <option>Karachi</option>
                   </select>
                 </div>
 
@@ -226,11 +241,10 @@ function BookCar() {
                   </label>
                   <select value={dropOff} onChange={handleDrop}>
                     <option>Select drop off location</option>
-                    <option>Delhi</option>
-                    <option>Kolkata</option>
-                    <option>Bengaluru</option>
-                    <option>Mumbai</option>
-                    <option>Goa</option>
+                    <option>Lahore</option>
+                    <option>Islamabad</option>
+                    <option>Multan</option>
+                    <option>Karachi</option>
                   </select>
                 </div>
 
@@ -376,7 +390,7 @@ function BookCar() {
                 <p className="error-modal ">This field is required.</p>
               </span>
 
-              <span>
+              {/* <span>
                 <label>
                   Phone Number <b>*</b>
                 </label>
@@ -387,7 +401,7 @@ function BookCar() {
                   placeholder="Enter your phone number"
                 ></input>
                 <p className="error-modal">This field is required.</p>
-              </span>
+              </span> */}
 
               <span>
                 <label>
@@ -403,7 +417,7 @@ function BookCar() {
               </span>
             </div>
 
-            <div className="info-form__1col">
+            {/* <div className="info-form__1col">
               <span>
                 <label>
                   Email <b>*</b>
@@ -429,9 +443,9 @@ function BookCar() {
                 ></input>
                 <p className="error-modal ">This field is required.</p>
               </span>
-            </div>
+            </div> */}
 
-            <div className="info-form__2col">
+            {/* <div className="info-form__2col">
               <span>
                 <label>
                   City <b>*</b>
@@ -457,12 +471,9 @@ function BookCar() {
                 ></input>
                 <p className="error-modal ">This field is required.</p>
               </span>
-            </div>
+            </div> */}
 
-            <span className="info-form__checkbox">
-              <input type="checkbox"></input>
-              <p>Please send me latest news and updates</p>
-            </span>
+           
 
             <div className="reserve-button">
               <button onClick={confirmBooking}>Reserve Now</button>

@@ -6,16 +6,28 @@ import Benz from "../images/cars-big/benz.jpg";
 import Passat from "../images/cars-big/passatcc.jpg";
 
 export const CAR_DATA = [
-  
+  {
+    name: "Hiace",
+    id: "1",
+    price: "39",
+    img: "https://images.carexpert.com.au/vehicles/source-g/1/b/1bb3977f.jpg",
+    model: "YMD",
+    mark: "Toyota",
+    year: "2024",
+    doors: "5",
+    air: "Yes",
+    transmission: "Manual",
+    fuel: "Diesel",
+  },
     {
-      name: "VW Golf 6",
-      id: "1",
+      name: "Coaster",
+      id: "4",
       price: "39",
-      img: "https://upload.wikimedia.org/wikipedia/commons/a/a2/VW_Golf_1.6_TDI_Style_%28VI%29_%E2%80%93_Frontansicht%2C_25._Februar_2012%2C_Ratingen.jpg",
-      model: "Golf 6",
-      mark: "Volkswagen",
-      year: "2008",
-      doors: "4/5",
+      img: "https://i.ytimg.com/vi/gzVtCYUz-Is/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB7aLzLp1Twp5p9ksqd7blNW4IJjw",
+      model: "Coaster",
+      mark: "Toyota",
+      year: "2024",
+      doors: "2",
       air: "Yes",
       transmission: "Manual",
       fuel: "Diesel",
@@ -23,75 +35,34 @@ export const CAR_DATA = [
  
 
     {
-      name: "Audi A1 S-Line",
+      name: "Toyota Prado",
       id: "2",
       price: "45",
-      img: "https://www.nationwide-cars.co.uk/media/range/Audi_A1_Sportback_2019_2.jpg",
-      model: "Audi",
-      mark: "A1",
-      year: "2012",
-      doors: "4/5",
+      img: "https://cdn.whichcar.com.au/assets/p_4x3/c925150b/2024-toyota-landcruiser-prado-usa-01.jpg",
+      model: "Prado",
+      mark: "Toyota",
+      year: "2024",
+      doors: "5",
       air: "Yes",
-      transmission: "Manual",
-      fuel: "Gasoline",
+      transmission: "Automatic",
+      fuel: "Diesel / Petrol",
     },
 
 
     {
-      name: "Toyota Camry",
+      name: "Toyota Hiace Hi Roof",
       id: "3",
       price: "30",
-      img: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202201/2022_Toyota_Camry_Hybrid-_Exte.jpg",
-      model: "Camry",
+      img: "https://www.dubicars.com/images/f2dc62/w_1300x760/we-can-motors/cc917ecc-b85a-48d9-9d36-36ca3a63914d.jpg",
+      model: "Hiace Hi Roof",
       mark: "Toyota",
-      year: "2006",
-      doors: "4/5",
-      air: "Yes",
-      transmission: "Automatic",
-      fuel: "Hybrid",
-    },
-
-
-    {
-      name: "BMW 320 ModernLine",
-      id: "4",
-      price: "35",
-      img: "https://lh4.googleusercontent.com/proxy/EmRRyk2mmFCh_XvTLS-jfufMLh16q2fSCOXycTId_F--njQd-a6AuGuzaXYW2RmhIoZ6EYkpeRJaASed9UgyHJC-xPQ7SMIC_PgLrz6bL2i-pPYOi_xj7Q",
-      model: "320",
-      mark: "BMW",
-      year: "2012",
-      doors: "4/5",
+      year: "2024",
+      doors: "3",
       air: "Yes",
       transmission: "Manual",
       fuel: "Diesel",
     },
-  
-    {
-      name: "Mercedes-Benz GLK",
-      id: "5",
-      price: "50",
-      img: "https://upload.wikimedia.org/wikipedia/commons/6/66/Mercedes-Benz_GLK_220_CDI_4MATIC_Sport-Paket_AMG_%28X_204%2C_Facelift%29_%E2%80%93_Frontansicht%2C_24._August_2014%2C_D%C3%BCsseldorf.jpg",
-      model: "Benz GLK",
-      mark: "Mercedes",
-      year: "2006",
-      doors: "4/5",
-      air: "Yes",
-      transmission: "Manual",
-      fuel: "Diesel",
-    },
-  
-    {
-      name: "VW Passat CC",
-      id: "6",
-      price: "25",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/VW_Passat_CC_2.0_TDI_DSG_Reflexsilber.JPG/1200px-VW_Passat_CC_2.0_TDI_DSG_Reflexsilber.JPG",
-      model: "Passat CC",
-      mark: "Volkswagen",
-      year: "2008",
-      doors: "4/5",
-      air: "Yes",
-      transmission: "Automatic",
-      fuel: "Gasoline",
-    },
- 
+
+
+     
 ];

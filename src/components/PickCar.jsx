@@ -1,11 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CarBox from "./CarBox";
 import { CAR_DATA } from "./CarData";
+import useVehicleStore from "../data/app_data";
 
 function PickCar() {
   const [active, setActive] = useState("SecondCar");
-  const [colorBtn, setColorBtn] = useState(CAR_DATA[0]["id"]);
-  const [selectedCar, setSelectedCar] = useState(CAR_DATA[0]);
+  const {vehicles} = useVehicleStore();
+  const [colorBtn, setColorBtn] = useState();
+  const [selectedCar, setSelectedCar] = useState();
+
+  useEffect(()=>{
+    if(vehicles !== undefined){
+      setColorBtn(vehicles[0]["id"]);
+      setSelectedCar(vehicles[0]);
+    }
+    console.log("pick car: ",vehicles);
+  },[vehicles]);
+  useEffect(()=>{
+   
+    console.log("selected car: ",selectedCar);
+  },[selectedCar]);
 
   const btnID = (id) => {
     setColorBtn(colorBtn === id ? "" : id);
@@ -17,7 +31,8 @@ function PickCar() {
 
   return (
     <>
-      <section className="pick-section">
+   {vehicles === null || vehicles === undefined ? (<></>) : ( <section className="pick-section" id="pick-section">
+       
         <div className="container">
           <div className="pick-container">
             <div className="pick-container__title">
@@ -31,13 +46,15 @@ function PickCar() {
             <div className="pick-container__car-content">
               {/* pick car */}
               <div className="pick-box">
-                {CAR_DATA.map((vehicle) => (
+                {vehicles?.map((vehicle) => (
                    <button
                    className={`${coloringButton(vehicle["id"])}`}
                    onClick={() => {
                     // setActive("SecondCar");
-                    setSelectedCar(vehicle);
-                     btnID("btn1");
+                    var veh = vehicles.find((veh) => (veh["id"] === vehicle["id"]));
+                    console.log("select: ",veh);
+                    setSelectedCar(veh);
+                     btnID(vehicle["id"]);
                    }}
                  >
                    {vehicle["name"]}
@@ -104,7 +121,7 @@ function PickCar() {
                 </button> */}
               </div>
 
-              {<CarBox data={selectedCar}  />}
+              {selectedCar !== undefined ? <CarBox data={selectedCar}  /> : <p>undefined</p>}
               {/* {active === "SecondCar" && <CarBox data={CAR_DATA[1]}  />}
               {active === "ThirdCar" && <CarBox data={CAR_DATA[2]}  />}
               {active === "FourthCar" && <CarBox data={CAR_DATA[3]}  />}
@@ -113,7 +130,7 @@ function PickCar() {
             </div>
           </div>
         </div>
-      </section>
+      </section>)}
     </>
   );
 }
