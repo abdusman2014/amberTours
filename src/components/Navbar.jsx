@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../images/logo/logo.png";
+import Logo from "../images/logo/amber-tours.jpg";
 import { useState } from "react";
 
 function Navbar() {
@@ -56,7 +56,8 @@ function Navbar() {
         <div className="navbar">
           <div className="navbar__img">
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-              <img src={Logo} alt="logo-img" />
+              
+              <img src={Logo} style={{height: 70,width: 70}} alt="logo-img" />
             </Link>
           </div>
           <ul className="navbar__links">

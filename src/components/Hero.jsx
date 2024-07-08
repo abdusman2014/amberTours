@@ -12,6 +12,11 @@ function Hero() {
 
   const bookBtn = () => {
     document
+      .querySelector("#booking-section")
+      .scrollIntoView({ behavior: "smooth" });
+  };
+  const pickBtn = () => {
+    document
       .querySelector("#pick-section")
       .scrollIntoView({ behavior: "smooth" });
   };
@@ -53,7 +58,7 @@ function Hero() {
                 >
                   Book Ride &nbsp; <i className="fa-solid fa-circle-check"></i>
                 </Link>
-                <Link className="hero-content__text__btns__learn-more" to="/">
+                <Link  onClick={pickBtn} className="hero-content__text__btns__learn-more" to="/">
                   Learn More &nbsp; <i className="fa-solid fa-angle-right"></i>
                 </Link>
               </div>
