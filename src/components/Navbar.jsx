@@ -38,11 +38,11 @@ function Navbar() {
                 Testimonials
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link onClick={openNav} to="/team">
                 Our Team
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link onClick={openNav} to="/contact">
                 Contact
@@ -83,12 +83,12 @@ function Navbar() {
                 Testimonials
               </Link>
             </li>
-            <li>
+            {/* <li>
               {" "}
               <Link className="team-link" to="/team">
                 Our Team
               </Link>
-            </li>
+            </li> */}
             <li>
               {" "}
               <Link className="contact-link" to="/contact">

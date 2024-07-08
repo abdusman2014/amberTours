@@ -2,11 +2,11 @@ function Footer() {
   return (
     <>
       <footer>
-        <div className="container">
+      
           <div className="footer-content">
             <ul className="footer-content__1">
               <li>
-                <span>CAR</span> Rental
+                <span>Amber</span> Tours
               </li>
               <li>
                 We offers a big range of vehicles for all your driving needs. We
@@ -14,7 +14,7 @@ function Footer() {
               </li>
               <li>
                 <a href="tel:123456789">
-                  <i className="fa-solid fa-phone"></i> &nbsp; (123) -456-789
+                  <i className="fa-solid fa-phone"></i> &nbsp; 051 2203088
                 </a>
               </li>
 
@@ -24,23 +24,14 @@ function Footer() {
                 carrental@gmail.com"
                 >
                   <i className="fa-solid fa-envelope"></i>
-                  &nbsp; carrental@xyz.com
+                  &nbsp; gulmehtabawan@gmail.com
                 </a>
               </li>
 
-              <li>
-                <a
-                  style={{ fontSize: "14px" }}
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://devrahuls.vercel.app/"
-                >
-                  Design with ❤️ by Rahul
-                </a>
-              </li>
+              
             </ul>
 
-            <ul className="footer-content__2">
+            {/* <ul className="footer-content__2">
               <li>Company</li>
               <li>
                 <a href="#home">Gallery</a>
@@ -57,7 +48,7 @@ function Footer() {
               <li>
                 <a href="#home">How we work</a>
               </li>
-            </ul>
+            </ul> */}
 
             <ul className="footer-content__2">
               <li>Working Hours</li>
@@ -79,7 +70,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-        </div>
+       
       </footer>
     </>
   );

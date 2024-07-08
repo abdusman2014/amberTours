@@ -8,14 +8,23 @@ import TestimonialsPage from "./Pages/TestimonialsPage";
 import Team from "./Pages/Team";
 import Contact from "./Pages/Contact";
 import useFetchData from './repository/UseFetchData';
+import useVehicleStore from "./data/app_data";
+import { useEffect,useRef } from "react";
 
 function App() {
-  const [data, isLoading] = useFetchData(
-    'vehicles'
-  );
+
+
+  const [ isLoading,fetchData] = useFetchData();
+
+  useEffect(()=>{
+    fetchData();
+  },[]);
+  
+  
   return (
     <>
   {isLoading ? (
+    
     <p>Loading...</p>
   ) : ( <>
       <Navbar />
@@ -24,7 +33,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="models" element={<Models />} />
         <Route path="testimonials" element={<TestimonialsPage />} />
-        <Route path="team" element={<Team />} />
+        {/* <Route path="team" element={<Team />} /> */}
         <Route path="contact" element={<Contact />} />
       </Routes>
     </>)}

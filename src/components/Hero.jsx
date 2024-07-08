@@ -12,7 +12,7 @@ function Hero() {
 
   const bookBtn = () => {
     document
-      .querySelector("#booking-section")
+      .querySelector("#pick-section")
       .scrollIntoView({ behavior: "smooth" });
   };
 

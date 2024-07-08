@@ -1,7 +1,10 @@
 import Img2 from "../images/testimonials/pfp1.jpg";
 import Img3 from "../images/testimonials/pfp2.jpg";
 
+import useVehicleStore from "../data/app_data";
+
 function Testimonials() {
+  const {testimonials} = useVehicleStore();
   return (
     <>
       <section className="testimonials-section">
@@ -19,27 +22,25 @@ function Testimonials() {
             </div>
 
             <div className="all-testimonials">
-              <div className="all-testimonials__box">
+          {testimonials.map(testimonial => (<div className="all-testimonials__box">
                 <span className="quotes-icon">
                   <i className="fa-solid fa-quote-right"></i>
                 </span>
                 <p>
-                  "We rented a car from this website and had an amazing
-                  experience! The booking was easy and the rental rates were
-                  very affordable. "
+                  " {testimonial["testimonial"]} "
                 </p>
                 <div className="all-testimonials__box__name">
                   <div className="all-testimonials__box__name__profile">
-                    <img src={Img2} alt="user_img" />
+                    <img src={testimonial["img"]} alt="user_img" />
                     <span>
-                      <h4>Parry Hotter</h4>
-                      <p>Belgrade</p>
+                      <h4>{testimonial["company"]}</h4>
+                     
                     </span>
                   </div>
                 </div>
-              </div>
+              </div>)) }
 
-              <div className="all-testimonials__box box-2">
+              {/* <div className="all-testimonials__box box-2">
                 <span className="quotes-icon">
                   <i className="fa-solid fa-quote-right"></i>
                 </span>
@@ -56,7 +57,7 @@ function Testimonials() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

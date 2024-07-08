@@ -13,3 +13,5 @@ class Vehicle {
         this.fuel = fuel;
     }
 }
+
+export default Vehicle
