@@ -103,10 +103,10 @@ function BookCar() {
     let message = "Hey, I want to Book " + car["name"] + "\n Name: " + name + " " + lastName + "\n Pickup location: " + pickUp + "\n Dropoff location: " + dropOff + "\n Pickup date: " + pickTime + "\n Dropoff date: "+ dropTime;
                           // Appending the message to the URL by encoding it
                           console.log(message);
-                          //   url += `&text=${encodeURI(message)}&app_absent=0`;
+                             url += `&text=${encodeURI(message)}&app_absent=0`;
                       
                           // // Open our newly created URL in a new tab to send the message
-                          //   window.open(url);
+                             window.open(url);
     e.preventDefault();
     setModal(!modal);
     const doneMsg = document.querySelector(".booking-done");
