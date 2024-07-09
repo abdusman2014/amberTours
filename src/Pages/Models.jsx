@@ -10,12 +10,12 @@ import CarImg6 from "../images/cars-big/passat-box.png";
 import { Link } from "react-router-dom";
 import { CAR_DATA } from "../components/CarData";
 import useVehicleStore from "../data/app_data";
-import useFetchData from '../repository/UseFetchData';
+import useFetchData from "../repository/UseFetchData";
 
 function Models() {
-  const {vehicles} = useVehicleStore();
-  
- // const isLoading = useVehicleStore( (state) => state.isLoading);
+  const { vehicles } = useVehicleStore();
+
+  // const isLoading = useVehicleStore( (state) => state.isLoading);
   // const [data, isLoading,fetchData] = useFetchData(
   //   'vehicles'
   // );
@@ -23,9 +23,9 @@ function Models() {
   // useEffect(()=>{
   //   fetchData();
   // },[]);
-  useEffect(()=>{
-    console.log("model veh: ",vehicles, "load: ", );
-  },[vehicles])
+  useEffect(() => {
+    console.log("model veh: ", vehicles, "load: ");
+  }, [vehicles]);
   return (
     <>
       <section className="models-section">
@@ -33,63 +33,70 @@ function Models() {
         <div className="container">
           <div className="models-div">
             <>
-            {
-              vehicles?.map((vehicle) =>{
-               
-              return  <div className="models-div__box">
-              <div className="models-div__box__img">
-                <img src={vehicle["img"]} alt="car_img" />
-                <div className="models-div__box__descr">
-                  <div className="models-div__box__descr__name-price">
-                    <div className="models-div__box__descr__name-price__name">
-                      <p>{vehicle["name"]}</p>
-                      <span>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                      </span>
-                    </div>
-                    <div className="models-div__box__descr__name-price__price">
-                      <h4>${vehicle["price"]}</h4>
-                      <p>per day</p>
-                    </div>
-                  </div>
-                  <div className="models-div__box__descr__name-price__details">
-                    <span>
-                      <i className="fa-solid fa-car-side"></i> &nbsp; {vehicle["model"]}
-                    </span>
-                    <span style={{ textAlign: "right" }}>
-                      {vehicle["doors"]} &nbsp; <i className="fa-solid fa-car-side"></i>
-                    </span>
-                    <span>
-                      <i className="fa-solid fa-car-side"></i> &nbsp; {vehicle["transmission"]}
-                    </span>
-                    <span style={{ textAlign: "right" }}>
-                      {vehicle["fuel"]} &nbsp; <i className="fa-solid fa-car-side"></i>
-                    </span>
-                  </div>
-                  <div className="models-div__box__descr__name-price__btn">
-                    <div onClick={() =>{
-                      let url = `https://web.whatsapp.com/send?phone=+923177936365}`;
-let message = "Hey, I want to Book " + vehicle["name"] + ", Please Provide me more information on this";
-                      // Appending the message to the URL by encoding it
-                        url += `&text=${encodeURI(message)}&app_absent=0`;
-                  
-                      // Open our newly created URL in a new tab to send the message
-                        window.open(url);
-                    }}>
-                      Book Ride
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-})
-            }
-            </>
+              {vehicles?.map((vehicle) => {
+                return (
+                  <div className="models-div__box">
+                    <div className="models-div__box__img">
+                      <img src={vehicle["img"]} alt="car_img" />
+                      <div className="models-div__box__descr">
+                        <div className="models-div__box__descr__name-price">
+                          <div className="models-div__box__descr__name-price__name">
+                            <p>{vehicle["name"]}</p>
+                            <span>
+                              <i className="fa-solid fa-star"></i>
+                              <i className="fa-solid fa-star"></i>
+                              <i className="fa-solid fa-star"></i>
+                              <i className="fa-solid fa-star"></i>
+                              <i className="fa-solid fa-star"></i>
+                            </span>
+                          </div>
+                          <div className="models-div__box__descr__name-price__price">
+                            <h4>${vehicle["price"]}</h4>
+                            <p>per day</p>
+                          </div>
+                        </div>
+                        <div className="models-div__box__descr__name-price__details">
+                          <span>
+                            <i className="fa-solid fa-car-side"></i> &nbsp;{" "}
+                            {vehicle["model"]}
+                          </span>
+                          <span style={{ textAlign: "right" }}>
+                            {vehicle["doors"]} &nbsp;{" "}
+                            <i className="fa-solid fa-car-side"></i>
+                          </span>
+                          <span>
+                            <i className="fa-solid fa-car-side"></i> &nbsp;{" "}
+                            {vehicle["transmission"]}
+                          </span>
+                          <span style={{ textAlign: "right" }}>
+                            {vehicle["fuel"]} &nbsp;{" "}
+                            <i className="fa-solid fa-car-side"></i>
+                          </span>
+                        </div>
+                        <div className="models-div__box__descr__name-price__btn">
+                          <div
+                            onClick={() => {
+                              let url = `https://web.whatsapp.com/send?phone=+923177936365}`;
+                              let message =
+                                "Hey, I want to Book " +
+                                vehicle["name"] +
+                                ", Please Provide me more information on this";
+                              // Appending the message to the URL by encoding it
+                              url += `&text=${encodeURI(message)}&app_absent=0`;
 
+                              // Open our newly created URL in a new tab to send the message
+                              window.open(url);
+                            }}
+                          >
+                            Book Ride
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </>
           </div>
         </div>
         <div className="book-banner">

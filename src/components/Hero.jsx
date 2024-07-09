@@ -58,7 +58,11 @@ function Hero() {
                 >
                   Book Ride &nbsp; <i className="fa-solid fa-circle-check"></i>
                 </Link>
-                <Link  onClick={pickBtn} className="hero-content__text__btns__learn-more" to="/">
+                <Link
+                  onClick={pickBtn}
+                  className="hero-content__text__btns__learn-more"
+                  to="/"
+                >
                   Learn More &nbsp; <i className="fa-solid fa-angle-right"></i>
                 </Link>
               </div>

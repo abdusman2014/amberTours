@@ -5,21 +5,20 @@ import useVehicleStore from "../data/app_data";
 
 function PickCar() {
   const [active, setActive] = useState("SecondCar");
-  const {vehicles} = useVehicleStore();
+  const { vehicles } = useVehicleStore();
   const [colorBtn, setColorBtn] = useState();
   const [selectedCar, setSelectedCar] = useState();
 
-  useEffect(()=>{
-    if(vehicles !== undefined){
+  useEffect(() => {
+    if (vehicles !== undefined) {
       setColorBtn(vehicles[0]["id"]);
       setSelectedCar(vehicles[0]);
     }
-    console.log("pick car: ",vehicles);
-  },[vehicles]);
-  useEffect(()=>{
-   
-    console.log("selected car: ",selectedCar);
-  },[selectedCar]);
+    console.log("pick car: ", vehicles);
+  }, [vehicles]);
+  useEffect(() => {
+    console.log("selected car: ", selectedCar);
+  }, [selectedCar]);
 
   const btnID = (id) => {
     setColorBtn(colorBtn === id ? "" : id);
@@ -31,36 +30,40 @@ function PickCar() {
 
   return (
     <>
-   {vehicles === null || vehicles === undefined ? (<></>) : ( <section className="pick-section" id="pick-section">
-       
-        <div className="container">
-          <div className="pick-container">
-            <div className="pick-container__title">
-              <h3>Vehicle Models</h3>
-              <h2>Our rental fleet</h2>
-              <p>
-                Choose from a variety of our amazing vehicles to rent for your
-                next adventure or business trip
-              </p>
-            </div>
-            <div className="pick-container__car-content">
-              {/* pick car */}
-              <div className="pick-box">
-                {vehicles?.map((vehicle) => (
-                   <button
-                   className={`${coloringButton(vehicle["id"])}`}
-                   onClick={() => {
-                    // setActive("SecondCar");
-                    var veh = vehicles.find((veh) => (veh["id"] === vehicle["id"]));
-                    console.log("select: ",veh);
-                    setSelectedCar(veh);
-                     btnID(vehicle["id"]);
-                   }}
-                 >
-                   {vehicle["name"]}
-                 </button>
-                ))}
-                {/* <button
+      {vehicles === null || vehicles === undefined ? (
+        <></>
+      ) : (
+        <section className="pick-section" id="pick-section">
+          <div className="container">
+            <div className="pick-container">
+              <div className="pick-container__title">
+                <h3>Vehicle Models</h3>
+                <h2>Our rental fleet</h2>
+                <p>
+                  Choose from a variety of our amazing vehicles to rent for your
+                  next adventure or business trip
+                </p>
+              </div>
+              <div className="pick-container__car-content">
+                {/* pick car */}
+                <div className="pick-box">
+                  {vehicles?.map((vehicle) => (
+                    <button
+                      className={`${coloringButton(vehicle["id"])}`}
+                      onClick={() => {
+                        // setActive("SecondCar");
+                        var veh = vehicles.find(
+                          (veh) => veh["id"] === vehicle["id"]
+                        );
+                        console.log("select: ", veh);
+                        setSelectedCar(veh);
+                        btnID(vehicle["id"]);
+                      }}
+                    >
+                      {vehicle["name"]}
+                    </button>
+                  ))}
+                  {/* <button
                   className={`${coloringButton("btn1")}`}
                   onClick={() => {
                     setActive("SecondCar");
@@ -119,18 +122,23 @@ function PickCar() {
                 >
                   VW Passat CC
                 </button> */}
-              </div>
+                </div>
 
-              {selectedCar !== undefined ? <CarBox data={selectedCar}  /> : <p>undefined</p>}
-              {/* {active === "SecondCar" && <CarBox data={CAR_DATA[1]}  />}
+                {selectedCar !== undefined ? (
+                  <CarBox data={selectedCar} />
+                ) : (
+                  <p>undefined</p>
+                )}
+                {/* {active === "SecondCar" && <CarBox data={CAR_DATA[1]}  />}
               {active === "ThirdCar" && <CarBox data={CAR_DATA[2]}  />}
               {active === "FourthCar" && <CarBox data={CAR_DATA[3]}  />}
               {active === "FifthCar" && <CarBox data={CAR_DATA[4]}  />}
               {active === "SixthCar" && <CarBox data={CAR_DATA[5]}  />} */}
+              </div>
             </div>
           </div>
-        </div>
-      </section>)}
+        </section>
+      )}
     </>
   );
 }

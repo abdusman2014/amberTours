@@ -9,26 +9,48 @@ function Contact() {
         <div className="container">
           <div className="contact-div">
             <div className="contact-div__text">
-              <h2>Need additional information?</h2>
-              <p>
-                A multifaceted professional skilled in multiple fields of
-                research, development as well as a learning specialist. Over 15
-                years of experience.
-              </p>
+              <h2>Contact Us</h2>
+              <h3>
+                We are here to assist you with all your car rental needs. Reach
+                out to us through any of the following methods, and our friendly
+                team will be happy to help.
+              </h3>
+              <h1>Head Office:</h1>
               <a href="/">
-                <i className="fa-solid fa-phone"></i>&nbsp; 051 2203088
+                <i className="fa-solid fa-phone"></i>Tel: 051-2203088,
+                051-2204852
               </a>
               <a href="/">
-                <i className="fa-solid fa-envelope"></i>&nbsp;
+                <i className="fa-solid fa-phone"></i>Cell: 0300-5151131,
+                0342-5332267
+              </a>
+              <a href="/">
+                <i className="fa-solid fa-envelope"></i>
                 gculmehtabawan@gmail.com
               </a>
               <a href="/">
-                <i className="fa-solid fa-envelope"></i>&nbsp;
-                Flat 2 Block 6, State Bank Colony, Said Pur Market, Near Z.T.B.L Bank, Sector G-7/1
+                <i className="fa-solid fa-envelope"></i>
+                Flat 2 Block 6, State Bank Colony, Said Pur Market, Near Z.T.B.L
+                Bank, Sector G-7/1
               </a>
               <a href="/">
-                <i className="fa-solid fa-location-dot"></i>&nbsp; Islamabad,
-                Pakistan
+                <i className="fa-solid fa-location-dot"></i> Islamabad, Pakistan
+              </a>
+              <div style={{ height: 20 }}></div>
+              <h1>Branch Office:</h1>
+              <a href="/">
+                <i className="fa-solid fa-phone"></i> Cell: 0315-3640469,
+                0336-2760470
+              </a>
+
+              <a href="/">
+                <i className="fa-solid fa-envelope"></i>
+                Ubaidullah Mirani, Rehmani Mohalla, Near DPO House, Madeji
+                District Shikarpur
+              </a>
+              <a href="/">
+                <i className="fa-solid fa-location-dot"></i> Tehsil Ghari
+                Yaseen-Sindh
               </a>
             </div>
             {/* <div className="contact-div__form">

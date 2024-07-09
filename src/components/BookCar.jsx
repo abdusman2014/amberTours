@@ -10,11 +10,11 @@ import useVehicleStore from "../data/app_data";
 
 function BookCar() {
   const [modal, setModal] = useState(false); //  class - active-modal
-  const {vehicles} = useVehicleStore();
+  const { vehicles } = useVehicleStore();
 
-  useEffect(()=>{
-    console.log("book veh: ",vehicles);
-  },[vehicles])
+  useEffect(() => {
+    console.log("book veh: ", vehicles);
+  }, [vehicles]);
 
   // booking car
   const [carType, setCarType] = useState("");
@@ -100,13 +100,27 @@ function BookCar() {
   // confirm modal booking
   const confirmBooking = (e) => {
     let url = `https://web.whatsapp.com/send?phone=+923177936365}`;
-    let message = "Hey, I want to Book " + car["name"] + "\n Name: " + name + " " + lastName + "\n Pickup location: " + pickUp + "\n Dropoff location: " + dropOff + "\n Pickup date: " + pickTime + "\n Dropoff date: "+ dropTime;
-                          // Appending the message to the URL by encoding it
-                          console.log(message);
-                             url += `&text=${encodeURI(message)}&app_absent=0`;
-                      
-                          // // Open our newly created URL in a new tab to send the message
-                             window.open(url);
+    let message =
+      "Hey, I want to Book " +
+      car["name"] +
+      "\n Name: " +
+      name +
+      " " +
+      lastName +
+      "\n Pickup location: " +
+      pickUp +
+      "\n Dropoff location: " +
+      dropOff +
+      "\n Pickup date: " +
+      pickTime +
+      "\n Dropoff date: " +
+      dropTime;
+    // Appending the message to the URL by encoding it
+    console.log(message);
+    url += `&text=${encodeURI(message)}&app_absent=0`;
+
+    // // Open our newly created URL in a new tab to send the message
+    window.open(url);
     e.preventDefault();
     setModal(!modal);
     const doneMsg = document.querySelector(".booking-done");
@@ -115,12 +129,13 @@ function BookCar() {
 
   // taking value of booking inputs
   const handleCar = (e) => {
-    console.log(e.target.value,"v: ",vehicles);
-   var veh = vehicles.find((vehicle) =>{ 
-    console.log(vehicle["id"])
-    return (vehicle["id"] === Number(e.target.value))});
-   console.log(veh);
-   setCar(veh);
+    console.log(e.target.value, "v: ", vehicles);
+    var veh = vehicles.find((vehicle) => {
+      console.log(vehicle["id"]);
+      return vehicle["id"] === Number(e.target.value);
+    });
+    console.log(veh);
+    setCar(veh);
     setCarType(e.target.value);
     setCarImg(veh["img"]);
   };
@@ -202,12 +217,10 @@ function BookCar() {
                     Type <b>*</b>
                   </label>
                   <select value={carType} onChange={handleCar}>
-                  <option>Select your car</option>
-                    {
-                      vehicles?.map((vehicle) => (
-                        <option value={vehicle["id"]}>{vehicle["name"]}</option>
-                      ))
-                    }
+                    <option>Select your car</option>
+                    {vehicles?.map((vehicle) => (
+                      <option value={vehicle["id"]}>{vehicle["name"]}</option>
+                    ))}
                     {/* <option>Select your car type</option>
                     <option value="Audi A1 S-Line">Audi A1 S-Line</option>
                     <option value="VW Golf 6">VW Golf 6</option>
@@ -285,112 +298,113 @@ function BookCar() {
 
       {/* modal ------------------------------------ */}
 
-    {car &&  <div className={`booking-modal ${modal ? "active-modal" : ""}`}>
-        {/* title */}
-        <div className="booking-modal__title">
-          <h2>Complete Reservation</h2>
-          <i onClick={openModal} className="fa-solid fa-xmark"></i>
-        </div>
-        {/* message */}
-        <div className="booking-modal__message">
-          <h4>
-            <i className="fa-solid fa-circle-info"></i> Upon completing this
-            reservation enquiry, you will receive:
-          </h4>
-          <p>
-            Your rental voucher to produce on arrival at the rental desk and a
-            toll-free customer support number.
-          </p>
-        </div>
-        {/* car info */}
-        <div className="booking-modal__car-info">
-          <div className="dates-div">
-            <div className="booking-modal__car-info__dates">
-              <h5>Location & Date</h5>
-              <span>
-                <i className="fa-solid fa-location-dot"></i>
-                <div>
-                  <h6>Pick-Up Date & Time</h6>
-                  <p>
-                    {pickTime} /{" "}
-                    <input type="time" className="input-time"></input>
-                  </p>
-                </div>
-              </span>
-            </div>
+      {car && (
+        <div className={`booking-modal ${modal ? "active-modal" : ""}`}>
+          {/* title */}
+          <div className="booking-modal__title">
+            <h2>Complete Reservation</h2>
+            <i onClick={openModal} className="fa-solid fa-xmark"></i>
+          </div>
+          {/* message */}
+          <div className="booking-modal__message">
+            <h4>
+              <i className="fa-solid fa-circle-info"></i> Upon completing this
+              reservation enquiry, you will receive:
+            </h4>
+            <p>
+              Your rental voucher to produce on arrival at the rental desk and a
+              toll-free customer support number.
+            </p>
+          </div>
+          {/* car info */}
+          <div className="booking-modal__car-info">
+            <div className="dates-div">
+              <div className="booking-modal__car-info__dates">
+                <h5>Location & Date</h5>
+                <span>
+                  <i className="fa-solid fa-location-dot"></i>
+                  <div>
+                    <h6>Pick-Up Date & Time</h6>
+                    <p>
+                      {pickTime} /{" "}
+                      <input type="time" className="input-time"></input>
+                    </p>
+                  </div>
+                </span>
+              </div>
 
-            <div className="booking-modal__car-info__dates">
-              <span>
-                <i className="fa-solid fa-location-dot"></i>
-                <div>
-                  <h6>Drop-Off Date & Time</h6>
-                  <p>
-                    {dropTime} /{" "}
-                    <input type="time" className="input-time"></input>
-                  </p>
-                </div>
-              </span>
-            </div>
+              <div className="booking-modal__car-info__dates">
+                <span>
+                  <i className="fa-solid fa-location-dot"></i>
+                  <div>
+                    <h6>Drop-Off Date & Time</h6>
+                    <p>
+                      {dropTime} /{" "}
+                      <input type="time" className="input-time"></input>
+                    </p>
+                  </div>
+                </span>
+              </div>
 
-            <div className="booking-modal__car-info__dates">
-              <span>
-                <i className="fa-solid fa-calendar-days"></i>
-                <div>
-                  <h6>Pick-Up Location</h6>
-                  <p>{pickUp}</p>
-                </div>
-              </span>
-            </div>
+              <div className="booking-modal__car-info__dates">
+                <span>
+                  <i className="fa-solid fa-calendar-days"></i>
+                  <div>
+                    <h6>Pick-Up Location</h6>
+                    <p>{pickUp}</p>
+                  </div>
+                </span>
+              </div>
 
-            <div className="booking-modal__car-info__dates">
-              <span>
-                <i className="fa-solid fa-calendar-days"></i>
-                <div>
-                  <h6>Drop-Off Location</h6>
-                  <p>{dropOff}</p>
-                </div>
-              </span>
+              <div className="booking-modal__car-info__dates">
+                <span>
+                  <i className="fa-solid fa-calendar-days"></i>
+                  <div>
+                    <h6>Drop-Off Location</h6>
+                    <p>{dropOff}</p>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div className="booking-modal__car-info__model">
+              <h5>
+                <span>Car -</span> {car["name"]}
+              </h5>
+              {<img src={car["img"]} alt="car_img" />}
             </div>
           </div>
-          <div className="booking-modal__car-info__model">
-            <h5>
-              <span>Car -</span> {car["name"]}
-            </h5>
-            { <img src={car["img"]} alt="car_img" />}
-          </div>
-        </div>
-        {/* personal info */}
-        <div className="booking-modal__person-info">
-          <h4>Personal Information</h4>
-          <form className="info-form">
-            <div className="info-form__2col">
-              <span>
-                <label>
-                  First Name <b>*</b>
-                </label>
-                <input
-                  value={name}
-                  onChange={handleName}
-                  type="text"
-                  placeholder="Enter your first name"
-                ></input>
-                <p className="error-modal">This field is required.</p>
-              </span>
+          {/* personal info */}
+          <div className="booking-modal__person-info">
+            <h4>Personal Information</h4>
+            <form className="info-form">
+              <div className="info-form__2col">
+                <span>
+                  <label>
+                    First Name <b>*</b>
+                  </label>
+                  <input
+                    value={name}
+                    onChange={handleName}
+                    type="text"
+                    placeholder="Enter your first name"
+                  ></input>
+                  <p className="error-modal">This field is required.</p>
+                </span>
 
-              <span>
-                <label>
-                  Last Name <b>*</b>
-                </label>
-                <input
-                  value={lastName}
-                  onChange={handleLastName}
-                  type="text"
-                  placeholder="Enter your last name"
-                ></input>
-                <p className="error-modal ">This field is required.</p>
-              </span>
+                <span>
+                  <label>
+                    Last Name <b>*</b>
+                  </label>
+                  <input
+                    value={lastName}
+                    onChange={handleLastName}
+                    type="text"
+                    placeholder="Enter your last name"
+                  ></input>
+                  <p className="error-modal ">This field is required.</p>
+                </span>
 
-              {/* <span>
+                {/* <span>
                 <label>
                   Phone Number <b>*</b>
                 </label>
@@ -403,21 +417,21 @@ function BookCar() {
                 <p className="error-modal">This field is required.</p>
               </span> */}
 
-              <span>
-                <label>
-                  Age <b>*</b>
-                </label>
-                <input
-                  value={age}
-                  onChange={handleAge}
-                  type="number"
-                  placeholder="18"
-                ></input>
-                <p className="error-modal ">This field is required.</p>
-              </span>
-            </div>
+                <span>
+                  <label>
+                    Age <b>*</b>
+                  </label>
+                  <input
+                    value={age}
+                    onChange={handleAge}
+                    type="number"
+                    placeholder="18"
+                  ></input>
+                  <p className="error-modal ">This field is required.</p>
+                </span>
+              </div>
 
-            {/* <div className="info-form__1col">
+              {/* <div className="info-form__1col">
               <span>
                 <label>
                   Email <b>*</b>
@@ -445,7 +459,7 @@ function BookCar() {
               </span>
             </div> */}
 
-            {/* <div className="info-form__2col">
+              {/* <div className="info-form__2col">
               <span>
                 <label>
                   City <b>*</b>
@@ -473,14 +487,13 @@ function BookCar() {
               </span>
             </div> */}
 
-           
-
-            <div className="reserve-button">
-              <button onClick={confirmBooking}>Reserve Now</button>
-            </div>
-          </form>
+              <div className="reserve-button">
+                <button onClick={confirmBooking}>Reserve Now</button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>}
+      )}
     </>
   );
 }
