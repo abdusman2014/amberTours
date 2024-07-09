@@ -2,7 +2,6 @@
 
 <h3>Build with:</h3>
 
-» Sass / Scss <br>
 » React JS
 
 ## Usage
