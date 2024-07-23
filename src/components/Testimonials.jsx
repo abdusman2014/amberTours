@@ -12,12 +12,11 @@ function Testimonials() {
           <div className="testimonials-content">
             <div className="testimonials-content__title">
               <h4>Reviewed by People</h4>
-              <h2>Client's Testimonials</h2>
+              <h2>Client Testimonials</h2>
               <p>
-                Discover the positive impact we've made on the our clients by
-                reading through their testimonials. Our clients have experienced
-                our service and results, and they're eager to share their
-                positive experiences with you.
+                Explore how our exceptional service has positively impacted our
+                clients. Read their testimonials to see firsthand how our
+                services have delivered outstanding results and experiences.
               </p>
             </div>
 

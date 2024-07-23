@@ -9,7 +9,7 @@ function PlanTrip() {
         <div className="container">
           <div className="plan-container">
             <div className="plan-container__title">
-              <h3>Our Services</h3>
+              <h3>Amber Tours Transport Services</h3>
               <h2>We offer a wide range of transport services</h2>
             </div>
 
@@ -18,8 +18,10 @@ function PlanTrip() {
                 <img src={SelectCar} alt="icon_img" />
                 <h3>Wedding ceremony transport</h3>
                 <p>
-                  Make your special day unforgettable with our elegant and
-                  reliable wedding transport services.
+                  Make your special day unforgettable with Amber Tours' elegant
+                  and reliable wedding transport services. Choose our affordable
+                  car rental options for weddings in Pakistan for a memorable
+                  experience.
                 </p>
               </div>
 
@@ -29,7 +31,8 @@ function PlanTrip() {
                 <p>
                   Enjoy comfortable and memorable journeys with our tailored
                   transport services for family and friends' trips across
-                  Pakistan.
+                  Pakistan. Affordable and reliable, perfect for all your travel
+                  needs.
                 </p>
               </div>
 
@@ -37,9 +40,9 @@ function PlanTrip() {
                 <img src={Drive} alt="icon_img" />
                 <h3>Transport Services for Companies</h3>
                 <p>
-                  We offer reliable and customized transport solutions for
-                  multinational companies and non-government organizations,
-                  ensuring seamless and professional service for all your needs.
+                  We offer customized and professional transport solutions for
+                  multinational companies and NGOs. Trust us for seamless,
+                  efficient, and cost-effective corporate transport services.
                 </p>
               </div>
             </div>

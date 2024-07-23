@@ -24,8 +24,8 @@ function Faq() {
               <h5>FAQ</h5>
               <h2>Frequently Asked Questions</h2>
               <p>
-                Frequently Asked Questions About the Car Rental Booking Process
-                on Our Website: Answers to Common Concerns and Inquiries.
+                Find answers to common concerns and inquiries about our car
+                rental booking process to make your experience seamless.
               </p>
             </div>
 
@@ -36,7 +36,7 @@ function Faq() {
                   onClick={() => openQ("q1")}
                   className={`faq-box__question  ${getClassQuestion("q1")}`}
                 >
-                  <p>1. What is special about comparing rental car deals?</p>
+                  <p>1. What types of cars are available for booking?</p>
                   <i className="fa-solid fa-angle-down"></i>
                 </div>
                 <div
@@ -44,13 +44,10 @@ function Faq() {
                   onClick={() => openQ("q1")}
                   className={`faq-box__answer ${getClassAnswer("q1")}`}
                 >
-                  Comparing rental car deals is important as it helps find the
-                  best deal that fits your budget and requirements, ensuring you
-                  get the most value for your money. By comparing various
-                  options, you can find deals that offer lower prices,
-                  additional services, or better car models. You can find car
-                  rental deals by researching online and comparing prices from
-                  different rental companies.
+                  <strong>Amber Tours</strong> offers a wide variety of vehicles
+                  to suit your needs, including luxury sedans, spacious SUVs,
+                  and comfortable vans. Contact us to find the perfect vehicle
+                  for your trip.
                 </div>
               </div>
               <div className="faq-box">
@@ -59,7 +56,7 @@ function Faq() {
                   onClick={() => openQ("q2")}
                   className={`faq-box__question ${getClassQuestion("q2")}`}
                 >
-                  <p>2. How do I find the car rental deals?</p>
+                  <p>2. Can I drive the vehicle myself?</p>
                   <i className="fa-solid fa-angle-down"></i>
                 </div>
                 <div
@@ -67,13 +64,9 @@ function Faq() {
                   onClick={() => openQ("q2")}
                   className={`faq-box__answer ${getClassAnswer("q2")}`}
                 >
-                  You can find car rental deals by researching online and
-                  comparing prices from different rental companies. Websites
-                  such as Expedia, Kayak, and Travelocity allow you to compare
-                  prices and view available rental options. It is also
-                  recommended to sign up for email newsletters and follow rental
-                  car companies on social media to be informed of any special
-                  deals or promotions.
+                  We do not offer a self-drive service. All of our vehicles come
+                  with a professional driver to ensure your safety and comfort
+                  throughout your journey .
                 </div>
               </div>
               <div className="faq-box">
@@ -82,7 +75,10 @@ function Faq() {
                   onClick={() => openQ("q3")}
                   className={`faq-box__question ${getClassQuestion("q3")}`}
                 >
-                  <p>3. How do I find such low rental car prices?</p>
+                  <p>
+                    3. Does the price include meals and accommodation for the
+                    driver?
+                  </p>
                   <i className="fa-solid fa-angle-down"></i>
                 </div>
                 <div
@@ -90,14 +86,50 @@ function Faq() {
                   onClick={() => openQ("q3")}
                   className={`faq-box__answer ${getClassAnswer("q3")}`}
                 >
-                  Book in advance: Booking your rental car ahead of time can
-                  often result in lower prices. Compare prices from multiple
-                  companies: Use websites like Kayak, Expedia, or Travelocity to
-                  compare prices from multiple rental car companies. Look for
-                  discount codes and coupons: Search for discount codes and
-                  coupons that you can use to lower the rental price. Renting
-                  from an off-airport location can sometimes result in lower
-                  prices.
+                  Meals and accommodation for the driver are not included in
+                  your quote. While you are not required to organize these for
+                  the driver, any arrangements made would be greatly appreciated
+                  by our team.
+                </div>
+                <div className="faq-box">
+                  <div
+                    id="q4-question"
+                    onClick={() => openQ("q4")}
+                    className={`faq-box__question ${getClassQuestion("q4")}`}
+                  >
+                    <p>4. Can we play music in the vehicle?</p>
+                    <i className="fa-solid fa-angle-down"></i>
+                  </div>
+                  <div
+                    id="q4-answer"
+                    onClick={() => openQ("q4")}
+                    className={`faq-box__answer ${getClassAnswer("q4")}`}
+                  >
+                    Many of our vehicles are equipped with AUX capabilities,
+                    allowing you to play your favorite music during the ride.
+                    However, this is subject to availability. Please contact our
+                    team to confirm any additional requirements.
+                  </div>
+                </div>
+                <div className="faq-box">
+                  <div
+                    id="q5-question"
+                    onClick={() => openQ("q5")}
+                    className={`faq-box__question ${getClassQuestion("q5")}`}
+                  >
+                    <p>5. Are there any luggage limitations?</p>
+                    <i className="fa-solid fa-angle-down"></i>
+                  </div>
+                  <div
+                    id="q5-answer"
+                    onClick={() => openQ("q5")}
+                    className={`faq-box__answer ${getClassAnswer("q5")}`}
+                  >
+                    Our drivers have the discretion to limit the amount of
+                    luggage based on the vehicle's capacity and safety
+                    considerations. Please discuss your luggage needs with our
+                    team when booking.
+                  </div>
                 </div>
               </div>
             </div>

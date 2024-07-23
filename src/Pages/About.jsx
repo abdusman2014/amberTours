@@ -17,19 +17,30 @@ function About() {
             <div className="about-main__text">
               <h2>Welcome to Amber Tours!</h2>
               <p>
-                Amber Tours was founded in 2000 by Gul Mehtab Awan in Islamabad,
-                Pakistan. With a passion for providing exceptional car rental
-                services, Gul started this journey with just three vehicles.
-                Today, Amber Tours is a leading car rental business in
-                Islamabad, boasting a fleet of 29 owned vehicles and over 100
-                leasehold vehicles.
+                Founded in 2000 by Gul Mehtab Awan in Islamabad, Pakistan,{" "}
+                <strong>Amber Tours</strong> has grown from a modest start with
+                just three vehicles to become a leading name in the car rental
+                industry. With a commitment to delivering exceptional car rental
+                services, Amber Tours now boasts a diverse fleet of{" "}
+                <strong>29 owned vehicles</strong> and over{" "}
+                <strong>100 leasehold vehicles</strong>. Our extensive fleet is
+                designed to meet a wide range of transportation needs, from
+                everyday commuting to special events and corporate rentals. As a
+                top choice for car rental in Islamabad, we are dedicated to
+                providing reliable, convenient, and affordable solutions for all
+                our customers.
               </p>
               <p>
-                At Amber Tours, we believe in staying ahead through continuous
-                technological advancements and vehicle upgrades, ensuring
-                top-notch service quality for our customers. Our commitment to
-                providing efficient and personalized services has helped us
-                build a strong reputation across Pakistan.{" "}
+                At <strong>Amber Tours</strong>, we prioritize staying at the
+                forefront of the car rental industry through ongoing{" "}
+                <strong>technological advancements</strong> and regular{" "}
+                <strong>vehicle upgrades</strong>. Our focus on delivering{" "}
+                <strong>high-quality car rental services</strong> ensures that
+                our customers receive efficient, reliable, and personalized
+                experiences. This dedication has established us as a trusted
+                name in <strong>car rentals across Pakistan</strong>,
+                reinforcing our strong reputation for excellence in the
+                industry.
               </p>
             </div>
             <img
@@ -59,40 +70,60 @@ function About() {
               <h2>Our Team</h2>
 
               <p>
-                Our team comprises dedicated professionals, including
-                experienced chauffeurs, qualified supervisors, and a supportive
-                staff. We take pride in our strict HR policies, ensuring that
-                only the most honest and hardworking individuals are part of
-                Amber Tours.
+                <p>
+                  At <strong>Amber Tours</strong>, our team consists of
+                  dedicated professionals, including{" "}
+                  <strong>experienced chauffeurs</strong>,{" "}
+                  <strong>qualified supervisors</strong>, and{" "}
+                  <strong>supportive staff</strong>. We take pride in our
+                  stringent <strong>HR policies</strong>, which ensure that only
+                  the most <strong>honest</strong> and{" "}
+                  <strong>hardworking individuals</strong> are part of our{" "}
+                  <strong>car rental service</strong>. Our commitment to
+                  maintaining high standards in our team reflects our dedication
+                  to providing exceptional service and a reliable transportation
+                  experience.
+                </p>
               </p>
             </div>
             <img className="about-team__img" src={Team} alt="car-renting" />
           </div>
           <div className="about-main__text">
             <h2>Clientele</h2>
-
             <p>
-              Over the years, we have built a diverse client network, serving
-              various sectors such as non-government organizations, the private
-              sector, and the education sector. Some of our esteemed clients
-              include Save the Children, USAID, Unilever Pakistan, and
-              Beaconhouse School System.
+              Over the years, <strong>Amber Tours</strong> has built a diverse
+              client network, providing exceptional{" "}
+              <strong>car rental services</strong> to various sectors including{" "}
+              <strong>non-government organizations (NGOs)</strong>, the{" "}
+              <strong>private sector</strong>, and the{" "}
+              <strong>education sector</strong>. Our esteemed clients include
+              renowned organizations such as <strong>Save the Children</strong>,{" "}
+              <strong>USAID</strong>, <strong>Unilever Pakistan</strong>, and
+              the <strong>Beaconhouse School System</strong>. Our commitment to
+              quality and reliability has made us a trusted name in the
+              industry.
             </p>
           </div>
           <div className="about-main__text">
             <h2>Our Commitment</h2>
 
             <p>
-              Customer satisfaction is our hallmark, and we measure our
-              performance by the satisfaction of our clients. With a 100%
-              reference-able client list, we are held to the highest standards
-              of quality. In an ever-evolving marketplace, our clients continue
-              to choose Amber Tours for our experience, commitment to quality,
-              and integrity.Over the years, we have built a diverse client
-              network, serving various sectors such as non-government
-              organizations, the private sector, and the education sector. Some
-              of our esteemed clients include Save the Children, USAID, Unilever
-              Pakistan, and Beaconhouse School System.
+              At <strong>Amber Tours</strong>,{" "}
+              <strong>customer satisfaction</strong> is our hallmark, and we
+              measure our performance by the satisfaction of our clients. With a{" "}
+              <strong>100% referenceable client list</strong>, we are held to
+              the highest standards of quality. In an ever-evolving marketplace,
+              our clients continue to choose Amber Tours for our extensive{" "}
+              <strong>experience</strong>, unwavering{" "}
+              <strong>commitment to quality</strong>, and{" "}
+              <strong>integrity</strong>. Over the years, we have built a
+              diverse client network, serving various sectors such as{" "}
+              <strong>non-government organizations (NGOs)</strong>, the{" "}
+              <strong>private sector</strong>, and the{" "}
+              <strong>education sector</strong>. Some of our esteemed clients
+              include <strong>Save the Children</strong>, <strong>USAID</strong>
+              , <strong>Unilever Pakistan</strong>, and the{" "}
+              <strong>Beaconhouse School System</strong>.
             </p>
             <p>
               We invite you to experience our exceptional car rental services

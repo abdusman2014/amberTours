@@ -16,15 +16,20 @@ function ChooseUs() {
             />
             <div className="text-container">
               <div className="text-container__left">
-                <h4>Why Choose Us</h4>
+                <h4>Why Choose Us for Your Car Rental Needs</h4>
                 <h2>Our Vision and Mission</h2>
                 <p>
-                  Our vision is to be the most trusted car rental service
-                  provider, offering seamless and reliable transport solutions.
-                  We aim to achieve this through our mission of delivering
-                  high-integrity services and maintaining the utmost
-                  professionalism in all our operations.
+                  At Amber Tours, our vision is to be the leading and most
+                  trusted car rental service provider in Pakistan. We strive to
+                  offer seamless, reliable, and affordable transport solutions
+                  to meet all your travel needs. Our mission is to deliver
+                  high-integrity, professional car rental services with
+                  exceptional customer satisfaction. Whether you're looking for
+                  cheap car rentals for weddings, corporate transport, or family
+                  trips, we are committed to providing the best experience in
+                  every journey.
                 </p>
+
                 <a href="#home">
                   Find Details &nbsp;
                   <i className="fa-solid fa-angle-right"></i>
@@ -36,8 +41,8 @@ function ChooseUs() {
                   <div className="text-container__right__box__text">
                     <h4>Cross Country Drive</h4>
                     <p>
-                      Take your driving experience to the next level with our
-                      top-notch vehicles for your cross-country adventures.
+                      Elevate your cross-country adventure with our premium
+                      vehicles designed for a superior driving experience.
                     </p>
                   </div>
                 </div>
@@ -47,8 +52,8 @@ function ChooseUs() {
                   <div className="text-container__right__box__text">
                     <h4>All Inclusive Pricing</h4>
                     <p>
-                      Get everything you need in one convenient, transparent
-                      price with our all-inclusive pricing policy.
+                      Enjoy transparent, all-inclusive pricing that covers
+                      everything you need for a hassle-free rental experience.
                     </p>
                   </div>
                 </div>
@@ -58,8 +63,8 @@ function ChooseUs() {
                   <div className="text-container__right__box__text">
                     <h4>No Hidden Charges</h4>
                     <p>
-                      Enjoy peace of mind with our no hidden charges policy. We
-                      believe in transparent and honest pricing.
+                      Benefit from our no hidden charges policy, ensuring clear
+                      and honest pricing with no surprises.
                     </p>
                   </div>
                 </div>
