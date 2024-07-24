@@ -11,9 +11,13 @@ function Contact() {
             <div className="contact-div__text">
               <h2>Contact Us</h2>
               <h3>
-                We are here to assist you with all your car rental needs. Reach
-                out to us through any of the following methods, and our friendly
-                team will be happy to help.
+                <strong>Amber Tours</strong> is dedicated to assisting you with
+                all your <strong>car rental needs</strong>. Contact us through
+                any of the following methods, and our{" "}
+                <strong>friendly and knowledgeable team</strong> will be
+                delighted to provide the support and information you need. We
+                are here to ensure you have a seamless and enjoyable{" "}
+                <strong>car rental experience</strong>.
               </h3>
               <h1>Head Office:</h1>
               <a href="/">

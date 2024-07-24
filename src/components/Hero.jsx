@@ -42,13 +42,15 @@ function Hero() {
           <img className="bg-shape" src={BgShape} alt="bg-shape" />
           <div className="hero-content">
             <div className="hero-content__text">
-              <h4>Plan your trip now</h4>
+              <h4>Plan Your Trip Now and</h4>
               <h1>
-                Save <span>big</span> with our car rental
+                Save <span>Big</span> with Amber Tours' Car Rentals
               </h1>
               <p>
-                Rent the car of your dreams. Unbeatable prices, unlimited miles,
-                flexible pick-up options and much more.
+                Discover Pakistan with Amber Tours! Rent the Car of Your Dreams
+                and Explore Pakistan's Hidden Gems! Enjoy unbeatable prices,
+                unlimited miles, convenient pick-up options, personalized tours,
+                and luxury cars for weddings.
               </p>
               <div className="hero-content__text__btns">
                 <Link
