@@ -47,11 +47,13 @@ function Hero() {
                 Save <span>Big</span> with Amber Tours' Car Rentals
               </h1>
               <p>
-                Discover Pakistan with Amber Tours! Rent the Car of Your Dreams
-                and Explore Pakistan's Hidden Gems! Enjoy unbeatable prices,
-                unlimited miles, convenient pick-up options, personalized tours,
-                and luxury cars for weddings.
+                Discover Pakistan with <strong>Amber Tours</strong>! Rent the
+                car of your dreams and explore Pakistan's hidden gems. Enjoy
+                unbeatable prices, unlimited miles, convenient pick-up options,
+                personalized tours, and luxury cars for weddings.{" "}
+                <strong>AmberTours: Your Journey, Your Way</strong>.
               </p>
+
               <div className="hero-content__text__btns">
                 <Link
                   onClick={bookBtn}
