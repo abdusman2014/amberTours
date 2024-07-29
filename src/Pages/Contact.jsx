@@ -10,7 +10,7 @@ function Contact() {
           <div className="contact-div">
             <div className="contact-div__text">
               <h2>Contact Us</h2>
-              <h3>
+              <p>
                 <strong>Amber Tours</strong> is dedicated to assisting you with
                 all your <strong>car rental needs</strong>. Contact us through
                 any of the following methods, and our{" "}
@@ -18,7 +18,7 @@ function Contact() {
                 delighted to provide the support and information you need. We
                 are here to ensure you have a seamless and enjoyable{" "}
                 <strong>car rental experience</strong>.
-              </h3>
+              </p>
               <h1>Head Office:</h1>
               <a href="/">
                 <i className="fa-solid fa-phone"></i>Tel: 051-2203088,
