@@ -1678,10 +1678,12 @@ footer {
 .about-main__img {
   width: 53rem;
   height: 43rem;
+  object-fit: contain;
 }
 .about-team__img {
   width: 53rem;
   height: 33rem;
+  object-fit: contain;
 }
 @media (max-width: 960px) {
   .about-main__img {
