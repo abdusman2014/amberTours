@@ -3,6 +3,8 @@ import HeroPages from "../components/HeroPages";
 import PlanTrip from "../components/PlanTrip";
 import AboutMain from "../images/about/about-main.jpg";
 import Team from "../images/about/team.jpg";
+import Team2 from "../images/about/team2.png";
+import Team3 from "../images/about/team3.png";
 import Box1 from "../images/about/icon1.png";
 import Box2 from "../images/about/icon2.png";
 import Box3 from "../images/about/icon3.png";
@@ -50,6 +52,52 @@ function About() {
             />
           </div>
           <div className="about-main__text">
+            <h2>Message from the CEO</h2>
+            <div className="ceo-message">
+              <p>
+                Welcome to <strong>AmberTours</strong>! I’m delighted to share
+                the story and vision behind our company. AmberTours began in
+                2000, shortly after I graduated from university. What started as
+                a passion project has grown into a leading car rental business
+                that I am proud to run and continually inspired by. At its core,{" "}
+                AmberTours is more than just a provider of transportation
+                services for individuals and companies; it’s about embracing the
+                journey and the freedom to create your own path. Our mission
+                extends beyond getting you from point A to point B; it's about
+                delivering a travel experience that is uniquely yours. " Amber
+                tour's is not just a tagline for us—it’s the essence of what we
+                believe in. We are committed to offering you the flexibility to
+                design your travel experience according to your needs and
+                desires. Whether you’re a tourist exploring new horizons or a
+                business requiring reliable transportation, AmberTours ensures
+                your journey is smooth, comfortable, and memorable. Over the
+                years, AmberTours has grown into Islamabad's leading car rental
+                business. With a fleet of company-owned cars and a team of
+                dedicated full-time drivers, we are well-equipped to meet the
+                diverse needs of our clients. Our professional chauffeurs and
+                well-maintained vehicles, including cars, SUVs, vans, and
+                coasters, are dedicated to providing the highest level of
+                service. We take pride in our attention to detail and our
+                unwavering commitment to customer satisfaction. Thank you for
+                choosing AmberTours. We look forward to being a part of your
+                journey and helping you create experiences that last a lifetime.
+              </p>
+              <p>
+                <strong>AmberTours: Your Journey, Your Way</strong>"
+              </p>
+            </div>
+
+            <p>
+              Regards,
+              <br />
+              Gul Mehtab Awan
+              <br />
+              Founder & CEO, Amber Tours
+            </p>
+          </div>
+          <img className="about-team__img" src={Team2} alt="car-renting" />
+
+          <div className="about-main__text">
             <h2>Our Services</h2>
             <h3>We offer a wide range of transport services, including: </h3>
 
@@ -86,7 +134,6 @@ function About() {
                 </p>
               </p>
             </div>
-            <img className="about-team__img" src={Team} alt="car-renting" />
           </div>
           <div className="about-main__text">
             <h2>Clientele</h2>
@@ -130,6 +177,7 @@ function About() {
               and look forward to becoming your trusted travel partner.
             </p>
           </div>
+          <img className="about-team__img" src={Team3} alt="car-renting" />
         </div>
       </section>
       <div className="book-banner">

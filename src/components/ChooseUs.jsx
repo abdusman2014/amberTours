@@ -65,6 +65,7 @@ function ChooseUs() {
                     <p>
                       Benefit from our no hidden charges policy, ensuring clear
                       and honest pricing with no surprises.
+                      <strong>AmberTours: Your Journey, Your Way</strong>.
                     </p>
                   </div>
                 </div>
