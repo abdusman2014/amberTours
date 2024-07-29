@@ -51,6 +51,7 @@ function About() {
               alt="car-renting"
             />
           </div>
+          <div className="about-main">
           <div className="about-main__text">
             <h2>Message from the CEO</h2>
             <div className="ceo-message">
@@ -95,8 +96,9 @@ function About() {
               Founder & CEO, Amber Tours
             </p>
           </div>
-          <img className="about-team__img" src={Team2} alt="car-renting" />
-
+          <img className="about-main__img" src={Team2} alt="car-renting" />
+          </div>
+          <div className="about-main">
           <div className="about-main__text">
             <h2>Our Services</h2>
             <h3>We offer a wide range of transport services, including: </h3>
@@ -112,6 +114,8 @@ function About() {
               <li>Family and friends pleasure trips across Pakistan</li>
               <li>Wedding ceremony transport</li>
             </ul>
+          </div>
+          <img className="about-team__img" src={Team3} alt="car-renting" />
           </div>
           <div className="about-team">
             <div className="about-main__text">
@@ -151,6 +155,7 @@ function About() {
               industry.
             </p>
           </div>
+          
           <div className="about-main__text">
             <h2>Our Commitment</h2>
 
@@ -177,7 +182,7 @@ function About() {
               and look forward to becoming your trusted travel partner.
             </p>
           </div>
-          <img className="about-team__img" src={Team3} alt="car-renting" />
+        
         </div>
       </section>
       <div className="book-banner">

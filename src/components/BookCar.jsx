@@ -73,8 +73,7 @@ function BookCar() {
     e.preventDefault();
     const errorMsg = document.querySelector(".error-message");
     if (
-      pickUp === "" ||
-      dropOff === "" ||
+      
       pickTime === "" ||
       dropTime === "" ||
       carType === ""
@@ -107,10 +106,7 @@ function BookCar() {
       name +
       " " +
       lastName +
-      "\n Pickup location: " +
-      pickUp +
-      "\n Dropoff location: " +
-      dropOff +
+     
       "\n Pickup date: " +
       pickTime +
       "\n Dropoff date: " +
@@ -233,7 +229,7 @@ function BookCar() {
                   </select>
                 </div>
 
-                <div className="box-form__car-type">
+                {/* <div className="box-form__car-type">
                   <label>
                     <i className="fa-solid fa-location-dot"></i> &nbsp; Pick-up{" "}
                     <b>*</b>
@@ -245,9 +241,9 @@ function BookCar() {
                     <option>Multan</option>
                     <option>Karachi</option>
                   </select>
-                </div>
+                </div> */}
 
-                <div className="box-form__car-type">
+                {/* <div className="box-form__car-type">
                   <label>
                     <i className="fa-solid fa-location-dot"></i> &nbsp; Drop-off{" "}
                     <b>*</b>
@@ -259,7 +255,7 @@ function BookCar() {
                     <option>Multan</option>
                     <option>Karachi</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div className="box-form__car-time">
                   <label htmlFor="picktime">
@@ -286,10 +282,12 @@ function BookCar() {
                     type="date"
                   ></input>
                 </div>
-
-                <button onClick={openModal} type="submit">
-                  Search
-                </button>
+               
+                 
+                  <button onClick={openModal} type="submit">
+                    Search
+                  </button>
+              
               </form>
             </div>
           </div>
@@ -346,7 +344,7 @@ function BookCar() {
                 </span>
               </div>
 
-              <div className="booking-modal__car-info__dates">
+              {/* <div className="booking-modal__car-info__dates">
                 <span>
                   <i className="fa-solid fa-calendar-days"></i>
                   <div>
@@ -354,9 +352,9 @@ function BookCar() {
                     <p>{pickUp}</p>
                   </div>
                 </span>
-              </div>
+              </div> */}
 
-              <div className="booking-modal__car-info__dates">
+              {/* <div className="booking-modal__car-info__dates">
                 <span>
                   <i className="fa-solid fa-calendar-days"></i>
                   <div>
@@ -364,7 +362,7 @@ function BookCar() {
                     <p>{dropOff}</p>
                   </div>
                 </span>
-              </div>
+              </div> */}
             </div>
             <div className="booking-modal__car-info__model">
               <h5>

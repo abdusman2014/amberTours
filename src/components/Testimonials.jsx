@@ -1,6 +1,7 @@
 import Img2 from "../images/testimonials/pfp1.jpg";
 import Img3 from "../images/testimonials/pfp2.jpg";
 
+
 import useVehicleStore from "../data/app_data";
 
 function Testimonials() {
@@ -19,7 +20,7 @@ function Testimonials() {
                 services have delivered outstanding results and experiences.
               </p>
             </div>
-
+          
             <div className="all-testimonials">
               {testimonials.map((testimonial) => (
                 <div className="all-testimonials__box">

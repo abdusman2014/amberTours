@@ -376,6 +376,7 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
+
   color: #010103;
 }
 @media (max-width: 400px) {
@@ -1235,11 +1236,15 @@ body {
 }
 
 .all-testimonials {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   gap: 3rem;
-  width: 100%;
-  justify-content: center;
-  padding: 3rem;
+  align-items: center;
+  text-align: center;
+  padding: 10rem 0;
+  width: 110rem;
+  margin: 0 auto;
 }
 @media (max-width: 1000px) {
   .all-testimonials {
@@ -1250,6 +1255,7 @@ body {
   background-color: white;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.08);
   width: 54rem;
+ 
   padding: 5.5rem;
   position: relative;
 }

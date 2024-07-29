@@ -87,12 +87,18 @@ function Navbar() {
                 Testimonials
               </Link>
             </li>
-            {/* <li>
+            <li>
               {" "}
-              <Link className="team-link" to="/team">
-                Our Team
+              <Link className="team-link" to="/gallery">
+                Gallery
               </Link>
-            </li> */}
+            </li>
+            <li>
+              {" "}
+              <Link className="team-link" to="/services">
+                Our Services
+              </Link>
+            </li>
             <li>
               {" "}
               <Link className="contact-link" to="/contact">

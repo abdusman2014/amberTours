@@ -28,24 +28,7 @@ function Footer() {
             </li>
           </ul>
 
-          {/* <ul className="footer-content__2">
-              <li>Company</li>
-              <li>
-                <a href="#home">Gallery</a>
-              </li>
-              <li>
-                <a href="#home">Careers</a>
-              </li>
-              <li>
-                <a href="#home">Mobile</a>
-              </li>
-              <li>
-                <a href="#home">Blog</a>
-              </li>
-              <li>
-                <a href="#home">How we work</a>
-              </li>
-            </ul> */}
+        
 
           <ul className="footer-content__2">
             <li>Working Hours</li>
@@ -54,18 +37,7 @@ function Footer() {
             <li>Sun: Closed</li>
           </ul>
 
-          <ul className="footer-content__2">
-            <li>Subscription</li>
-            <li>
-              <p>Subscribe your Email address for latest news & updates.</p>
-            </li>
-            <li>
-              <input type="email" placeholder="Enter Email Address"></input>
-            </li>
-            <li>
-              <button className="submit-email">Submit</button>
-            </li>
-          </ul>
+        
         </div>
       </footer>
     </>

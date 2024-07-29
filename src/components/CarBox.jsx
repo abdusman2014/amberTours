@@ -20,7 +20,7 @@ function CarBox({ data }) {
         {/* description */}
         <div className="pick-description">
           <div className="pick-description__price">
-            <span>${data["price"]}</span>/ rent per day
+            <span>RS. {data["price"]}</span>/ rent per day
           </div>
           <div className="pick-description__table">
             <div className="pick-description__table__col">
