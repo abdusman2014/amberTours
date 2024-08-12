@@ -44,7 +44,7 @@ function Hero() {
             <div className="hero-content__text">
               <h4>Plan Your Trip Now and</h4>
               <h1>
-                Save <span>Big</span> with Amber Tours' Car Rentals
+                Explore <span>Pakistan</span> with Amber Tours' Car Rentals
               </h1>
               <p>
                 Discover Pakistan with <strong>Amber Tours</strong>! Rent the

@@ -24,9 +24,13 @@ function Contact() {
                 <i className="fa-solid fa-phone"></i>Tel: 051-2203088,
                 051-2204852
               </a>
-              <a href="/">
+              <a >
                 <i className="fa-solid fa-phone"></i>Cell: 0300-5151131,
                 0342-5332267
+              </a>
+              <a >
+                <i className="fa-solid fa-phone"></i> Cell: 0342-5332267,
+                0300-5151131
               </a>
               <a href="/">
                 <i className="fa-solid fa-envelope"></i>
@@ -46,6 +50,7 @@ function Contact() {
                 <i className="fa-solid fa-phone"></i> Cell: 0315-3640469,
                 0336-2760470
               </a>
+              
 
               <a href="/">
                 <i className="fa-solid fa-envelope"></i>

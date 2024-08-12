@@ -16,7 +16,7 @@ function PlanTrip() {
             <div className="plan-container__boxes">
               <div className="plan-container__boxes__box">
                 <img src={SelectCar} alt="icon_img" />
-                <h3>Wedding ceremony transport</h3>
+                <h3>Event Transportation</h3>
                 <p>
                   Make your special day unforgettable with Amber Tours' elegant
                   and reliable wedding transport services. Choose our affordable
